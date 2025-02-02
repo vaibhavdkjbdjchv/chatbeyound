@@ -10,6 +10,7 @@ import HowtoStart from "../../components/HowtoStart";
 import { useState, useEffect } from "react";
 
 import { useNavigate } from "react-router-dom";
+import Footer from "../../components/Footer";
 function HomePage() {
   const { loginWithRedirect, logout, user, isAuthenticated } = useAuth0();
   const navigate = useNavigate();
@@ -354,6 +355,9 @@ function HomePage() {
             }
           />
         </div>
+      </div>
+      <div className="bg-white">
+        <Footer />
       </div>
     </div>
   );
