@@ -119,7 +119,7 @@ const WebpageList = () => {
   const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate("/testingchatbot");
+    navigate("/start");
   };
   const [selectedPage, setSelectedPage] = useState(null);
 

@@ -11,10 +11,10 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/start" element={<Start />} />
+        <Route path="/new-page" element={<Start />} />
         <Route path="/webpages" element={<WebpageList />} />
         <Route path="/testingchatbot" element={<TestIntegration />} />
-        <Route path="/new-page" element={<IntegrationInstructions />} />
+        <Route path="/start" element={<IntegrationInstructions />} />
       </Routes>
     </Router>
     // <div className="flex flex-col items-center justify-center h-screen bg-gray-100">

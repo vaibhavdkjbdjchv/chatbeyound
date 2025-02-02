@@ -55,7 +55,7 @@ const IntegrationInstructions = () => {
 
             <button
               className="bg-green-500 hover:bg-green-700 text-white px-4 py-2 rounded-md "
-              onClick={() => navigate("/start")}
+              onClick={() => navigate("/testingchatbot")}
             >
               Test Integration
             </button>
