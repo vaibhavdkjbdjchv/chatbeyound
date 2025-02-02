@@ -50,7 +50,7 @@ function HomePage() {
           <div
             className={
               isActive
-                ? "absolute bottom-50  right-5  z-99999999 visible"
+                ? "fixed bottom-50  right-5  z-99999999 visible"
                 : "hidden"
             }
           >
@@ -116,7 +116,7 @@ function HomePage() {
           onClick={toggleClass}
           className={
             isActive
-              ? "md:w-[100px] w-[80px] animate-none absolute bottom-20 right-5 z-99999999"
+              ? "md:w-[100px] bg-[#7d39ff] p-1 rounded-full w-[80px] animate-none  bottom-20  right-5   z-99999999 fixed"
               : "md:w-[100px] bg-[#7d39ff] p-1 rounded-full w-[80px] animate-pulse  bottom-20  right-5   z-99999999 fixed"
           }
           alt=""
