@@ -124,7 +124,7 @@ const WebpageList = () => {
   const [selectedPage, setSelectedPage] = useState(null);
 
   return (
-    <div className="w-full h-[100vh] bg-white flex justify-center items-center p-5">
+    <div className="w-[100vw] h-[100vh] bg-white flex justify-center items-center p-5">
       <div className="w-full sm:w-3/4 md:w-1/2 lg:w-1/3 flex flex-col justify-center items-center gap-10">
         <h2 className="text-2xl font-bold text-[#7d39ff] text-center">
           Detected Webpages
@@ -132,11 +132,11 @@ const WebpageList = () => {
 
         {/* Table */}
         <table className="w-full table-auto">
-          <thead>
-            <tr className="bg-[#7d39ff] text-white rounded-3xl">
-              <th className="p-3 text-left">Webpage URL</th>
-              <th className="p-3 text-left">Status</th>
-              <th className="p-3 text-left">View Data</th>
+          <thead className="bg-[#7d39ff] w-full px-5 text-white">
+            <tr className="">
+              <td className="p-3 text-[15px] text-left ">Webpage URL</td>
+              <td className="p-3 text-[15px] text-center">Status</td>
+              <td className="p-3 text-[15px] text-center">View Data</td>
             </tr>
           </thead>
           <tbody>
@@ -145,18 +145,20 @@ const WebpageList = () => {
                 key={page.id}
                 className="border-b-2 border-[#ddd] hover:bg-gray-100"
               >
-                <td className="py-3 px-5">{page.url}</td>
+                <td className="py-3 text-[12px] px-5">{page.url}</td>
                 <td className="py-3 px-5">{page.status}</td>
                 <td className="py-3 px-5">
                   {page.status === "Scraped" ? (
                     <button
-                      className="bg-[#7d39ff] text-white py-2 px-5 sm:w-auto rounded-2xl cursor-pointer hover:bg-transparent border-[#7d39ff] border-1 hover:border-1 hover:border-[#7d39ff] hover:text-black"
+                      className="bg-[#7d39ff] py-1 px-1 text-[10px] text-white md:py-2 md:px-5 sm:w-auto rounded-2xl cursor-pointer hover:bg-transparent border-[#7d39ff] border-1 hover:border-1 hover:border-[#7d39ff] hover:text-black"
                       onClick={() => setSelectedPage(page)}
                     >
                       View Data
                     </button>
                   ) : (
-                    <span className="text-red-700 px-5">Pending...</span>
+                    <span className="text-red-700 px-5 md:text-[15px] text-[10px]">
+                      Pending...
+                    </span>
                   )}
                 </td>
               </tr>
