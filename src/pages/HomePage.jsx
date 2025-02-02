@@ -315,7 +315,7 @@ function HomePage() {
           />
           <HowtoStart
             img={images.start3}
-            step="3"
+            step="2"
             title="Enter Company Details"
             desc={
               "A form interface where users can input a company name, website URL, and fetch meta descriptions. It also includes a section for a company description and a submit button."
@@ -323,7 +323,7 @@ function HomePage() {
           />
           <HowtoStart
             img={images.start4}
-            step="4"
+            step="3"
             title="Detected Webpages"
             desc={
               " A dashboard displaying detected webpage URLs along with their scraping status (scraped or pending). It includes options to view data and a button to start chatbot training."
@@ -331,7 +331,7 @@ function HomePage() {
           />
             <HowtoStart
               img={images.start2}
-              step="2"
+              step="4"
               title="Integration Screen"
               desc={
                 "This screen provides the code snippet to embed a chatbot on your website, along with options to send integration instructions to a developer via email or test the integration"
