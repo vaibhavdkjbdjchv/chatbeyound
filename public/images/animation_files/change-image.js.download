@@ -1,0 +1,31 @@
+const panelImg = document.querySelector('.photo .panel');
+const chatImg = document.querySelector('.photo .chat');
+
+const panelImages = ['images/hero/travel1.webp', 'images/hero/dogs1.webp', 'images/hero/food1.webp'];
+const chatImages = ['images/hero/travel2.webp', 'images/hero/dogs2.webp', 'images/hero/food2.webp'];
+
+let currentImage = 0;
+
+function changeImages() {
+    panelImg.classList.add('exit');
+
+    setTimeout(() => {
+        currentImage = (currentImage + 1) % panelImages.length;
+        panelImg.src = panelImages[currentImage];
+        panelImg.classList.remove('exit');
+        panelImg.classList.add('enter');
+
+        setTimeout(() => {
+            panelImg.classList.remove('enter');
+        }, 1000);
+    }, 1000);
+
+    chatImg.classList.remove('active');
+
+    setTimeout(() => {
+        chatImg.src = chatImages[currentImage];
+        chatImg.classList.add('active');
+    }, 1000);
+}
+
+setInterval(changeImages, 8000);

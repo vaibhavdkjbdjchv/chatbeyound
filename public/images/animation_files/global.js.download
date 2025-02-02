@@ -1,0 +1,84 @@
+document.addEventListener('DOMContentLoaded', function () {
+
+    /*------------------------Burger menu------------------------*/
+    const burger = document.querySelector('.burger');
+
+    burger.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector('.header').classList.toggle('active');
+    });
+
+    /*------------------------Header menu------------------------*/
+    const menuTitles = document.querySelectorAll('.menu-title');
+
+    menuTitles.forEach(title => {
+        title.addEventListener('click', function () {
+            const menuItem = this.closest('.menu-item');
+            menuItem.classList.toggle('active'); // Добавляем/удаляем класс active
+
+            // Закрыть другие раскрытые списки
+            document.querySelectorAll('.menu-item').forEach(item => {
+                if (item !== menuItem) {
+                    item.classList.remove('active');
+                }
+            });
+        });
+    });
+
+    /*------------------------Dropdown menu------------------------*/
+    var dropdownToggle = document.querySelectorAll('.dropdown-toggle');
+
+    dropdownToggle.forEach(function (element) {
+        element.addEventListener('click', function (e) {
+            e.preventDefault();
+            var dropdownMenu = this.nextElementSibling;
+            toggleDropdown(this, dropdownMenu);
+        });
+    });
+
+    document.addEventListener('click', function (e) {
+        var target = e.target;
+        if (!target.classList.contains('dropdown-toggle')) {
+            var dropdownMenus = document.querySelectorAll('.dropdown-menu');
+            dropdownMenus.forEach(function (menu) {
+                menu.style.display = 'none';
+            });
+            dropdownToggle.forEach(function (toggle) {
+                toggle.classList.remove('active');
+            });
+        }
+    });
+
+    function toggleDropdown(toggle, dropdownMenu) {
+        var style = window.getComputedStyle(dropdownMenu);
+        if (style.display === 'none') {
+            dropdownMenu.style.display = 'block';
+            toggle.classList.add('active');
+        } else {
+            dropdownMenu.style.display = 'none';
+            toggle.classList.remove('active');
+        }
+    }
+
+    /*------------------------Animate logo------------------------*/
+
+    window.addEventListener('scroll', function () {
+        const headNav = document.querySelector('.head-nav');
+        const scrollPosition = window.scrollY || window.pageYOffset;
+
+        if (scrollPosition > 150) {
+            headNav.classList.add('active');
+        } else {
+            headNav.classList.remove('active');
+        }
+    });
+
+    document.querySelector("#askNorby").addEventListener("click", (function(e) {
+        e.preventDefault();
+        
+        norbyChat.addPopupMessages({
+            text: "Ask me if you have any questions<br> or use me as a demo!"
+        })
+    }
+    ));
+});

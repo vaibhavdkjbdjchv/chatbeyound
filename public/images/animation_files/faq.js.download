@@ -1,0 +1,23 @@
+document.addEventListener('DOMContentLoaded', function () {
+    /*------------------------FAQ Toggle------------------------*/
+    const faqItems = document.querySelectorAll('.faq-item');
+    const faqImages = document.querySelectorAll('.faq-images [data-image]');
+
+    faqItems.forEach(item => {
+        const faqQuestion = item.querySelector('.faq-question');
+
+        faqQuestion.addEventListener('click', () => {
+            faqItems.forEach(i => i.classList.remove('active'));
+            faqImages.forEach(img => img.classList.remove('active'));
+
+            if (!item.classList.contains('active')) {
+                item.classList.add('active');
+                const faqId = faqQuestion.getAttribute('data-faq');
+                const correspondingImage = document.querySelector(`.faq-images [data-image="${faqId}"]`);
+                if (correspondingImage) {
+                    correspondingImage.classList.add('active')
+                }
+            }
+        });
+    });
+});

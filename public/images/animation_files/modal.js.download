@@ -1,0 +1,30 @@
+document.addEventListener('click', function (event) {
+    const modal = document.querySelector('.modal');
+    const btnClose = event.target.closest('.btn-close');
+    const modalTrigger = event.target.closest('[data-modal-target]');
+
+    if (modalTrigger) {
+        event.preventDefault();
+        const modalId = modalTrigger.getAttribute('data-modal-target');
+        const targetModal = document.getElementById(modalId);
+        targetModal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
+
+    if (btnClose) {
+        closeModal(modal);
+    }
+
+    if (modal && event.target === modal) {
+        closeModal(modal);
+    }
+});
+
+function closeModal(modal) {
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+
+    let iframe = document.querySelector('iframe');
+    
+    iframe.src = iframe.src;
+}
