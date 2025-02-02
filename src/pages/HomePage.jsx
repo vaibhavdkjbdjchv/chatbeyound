@@ -44,7 +44,7 @@ function HomePage() {
   };
 
   return (
-    <div className="page1 bg-[#1c1c1c]">
+    <div className="page1 relative bg-[#1c1c1c]">
       <div>
         <div className="flex  flex-col justify-start items-end">
           <div
@@ -128,7 +128,7 @@ function HomePage() {
         animate={{ top: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.5 }}
         src={images.bghero}
-        className="absolute z-0 right-80 w-1/4"
+        className="absolute z-0 md:right-80 md:w-1/4 md:top-0 right-5 w-[350px] "
       />
       {/* first page */}
       <div className="page1container relative w-[100vw] h-[100vh] ">
