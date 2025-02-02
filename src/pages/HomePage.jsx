@@ -116,8 +116,8 @@ function HomePage() {
           onClick={toggleClass}
           className={
             isActive
-              ? "w-1/4  animate-none absolute bottom-20 right-5 z-99999999"
-              : "w-1/4 animate-pulse  absolute bottom-20  right-5   z-99999999"
+              ? "w-[100px] animate-none absolute bottom-20 right-5 z-99999999"
+              : "w-[100px] animate-pulse  absolute bottom-20  right-5   z-99999999"
           }
           alt=""
         />
@@ -152,7 +152,7 @@ function HomePage() {
                 <div className="w-1/2">
                   <motion.div
                     onClick={handleRedirect}
-                    className="page1text button w-70 rounded-3xl text-white text-xl font-bold flex color-contrast-fix bg-[#7d39ff]   border-[#53e7c3] justify-center items-center px-5 py-5 hover:bg-[#53e7c3] hover:text-[#7d39ff]"
+                    className="page1text button w-70 rounded-3xl text-white md:text-[20px] font-bold flex color-contrast-fix bg-[#7d39ff]   border-[#53e7c3] justify-center items-center md:px-5 md:py-5 hover:bg-[#53e7c3] hover:text-[#7d39ff] py-2 text-[15px] "
                   >
                     Create Your ChatBot
                   </motion.div>
@@ -329,14 +329,14 @@ function HomePage() {
               " A dashboard displaying detected webpage URLs along with their scraping status (scraped or pending). It includes options to view data and a button to start chatbot training."
             }
           />
-            <HowtoStart
-              img={images.start2}
-              step="4"
-              title="Integration Screen"
-              desc={
-                "This screen provides the code snippet to embed a chatbot on your website, along with options to send integration instructions to a developer via email or test the integration"
-              }
-            />
+          <HowtoStart
+            img={images.start2}
+            step="4"
+            title="Integration Screen"
+            desc={
+              "This screen provides the code snippet to embed a chatbot on your website, along with options to send integration instructions to a developer via email or test the integration"
+            }
+          />
           <HowtoStart
             img={images.start5}
             step="5"
