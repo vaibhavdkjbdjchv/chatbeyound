@@ -12,7 +12,7 @@ import images from "../src/images";
 
 const Footer = () => {
   return (
-    <div className="bg-gray-900 text-white py-8 px-4 rounded-t-[100px]">
+    <div className="bg-gray-900 text-white py-8 px-4 md:rounded-t-[100px] rounded-t-4xl">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-6">
         {/* Logo Section */}
         <div className="flex flex-col space-y-3">
