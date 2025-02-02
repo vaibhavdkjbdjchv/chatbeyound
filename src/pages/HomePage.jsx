@@ -108,7 +108,7 @@ function HomePage() {
           <img
             src={images.logo}
             onClick={toggleClass}
-            className="w-1/4"
+            className={isActive ? "w-1/4 animate-none" : "w-1/4 animate-pulse"}
             alt=""
           />
         </div>

@@ -35,6 +35,7 @@ body {
   font-family: Inter;
   position: relative;
 }
+
 .navbar {
   background: #2929297e;
   backdrop-filter: blur(10px);
@@ -129,9 +130,20 @@ body {
     scale: 0.5;
   }
 }
+@keyframes chatimage {
+  0% {
+    scale: 0.5;
+  }
+  50% {
+    scale: 1;
+  }
+  100% {
+    scale: 0.5;
+  }
+}
 
-.noticeMessage {
-  animation: noticeMessage 4s ease-in-out infinite;
+.chatimage {
+  animation: chatimage 4s ease-in-out infinite;
 }
 
 table {
