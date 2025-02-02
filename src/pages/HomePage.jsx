@@ -45,7 +45,7 @@ function HomePage() {
 
   return (
     <div className="page1 bg-[#1c1c1c]">
-      <div className="absolute bottom-10 right-10 w-80 z-99999999">
+      <div className="absolute bottom-20 right-10 w-80 z-99999999">
         <div className="flex flex-col justify-start items-end">
           <div className={isActive ? "visible" : "hidden"}>
             <div>
