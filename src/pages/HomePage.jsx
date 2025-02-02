@@ -53,9 +53,9 @@ function HomePage() {
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ duration: 0.3 }}
-                className="w-90 h-120 bg-[#eaeef3] flex flex-col justify-between rounded-3xl"
+                className="md:w-90 w-55 md:h-120 h-80 bg-[#eaeef3] flex flex-col justify-between rounded-3xl"
               >
-                <div className="bg-blue-600 rounded-t-3xl text-white px-4 py-3 flex items-center">
+                <div className="bg-blue-600 md:text-[20px] text-[12px] rounded-t-3xl text-white px-4 py-3 flex items-center">
                   <img
                     src={images.logo}
                     alt="AI Avatar"
@@ -63,7 +63,7 @@ function HomePage() {
                   />
                   <div>
                     <strong>Beyound AI</strong>
-                    <h2 className="text-[10px] font-bold text-green-400">
+                    <h2 className="md:text-[10px] text-[5px] font-bold text-green-400">
                       .Online
                     </h2>
                   </div>
@@ -73,7 +73,7 @@ function HomePage() {
                   {messages.map((msg, index) => (
                     <div
                       key={index}
-                      className="bg-white font-semibold text-[13px] text-black p-2 rounded-lg"
+                      className="bg-white  font-semibold md:text-[13px] text-[10px] text-black p-2 rounded-lg"
                     >
                       {msg}
                     </div>
@@ -84,14 +84,14 @@ function HomePage() {
                   <div className="border-t bg-white flex p-2">
                     <input
                       type="text"
-                      className="flex-1  rounded-md px-2 py-1 text-black"
+                      className="flex-1 text-[10px] md:text-[15px]  rounded-md  py-1 text-black"
                       placeholder="Type a message..."
                       value={input}
                       onChange={(e) => setInput(e.target.value)}
                       onKeyDown={(e) => e.key === "Enter" && sendMessage()}
                     />
                     <button
-                      className="bg-blue-600 text-white px-3 ml-2 rounded-md"
+                      className="bg-blue-600 text-[10px] md:text-[15px] text-white px-3 ml-2 rounded-md"
                       onClick={sendMessage}
                     >
                       Send
