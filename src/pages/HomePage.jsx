@@ -128,7 +128,7 @@ function HomePage() {
         animate={{ top: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.5 }}
         src={images.bghero}
-        className="absolute z-0 md:right-80 md:w-1/4 md:top-0 right-5 w-[350px] "
+        className="absolute z-0 md:right-80 md:w-1/4 md:top-0  w-[350px] -left-20"
       />
       {/* first page */}
       <div className="page1container relative w-[100vw] h-[100vh] ">
