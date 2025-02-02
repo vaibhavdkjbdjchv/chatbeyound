@@ -45,9 +45,6 @@ function HomePage() {
 
   return (
     <div className="page1 bg-[#1c1c1c]">
-      {!isAuthenticated
-        ? alert("please sigun up page")
-        : alert("thank you for sign up")}
       <div className="absolute bottom-10 right-10 w-80 z-99999999">
         <div className="flex flex-col justify-start items-end">
           <div className={isActive ? "visible" : "hidden"}>
@@ -111,7 +108,7 @@ function HomePage() {
           <img
             src={images.logo}
             onClick={toggleClass}
-            className="w-30"
+            className="w-1/4"
             alt=""
           />
         </div>
