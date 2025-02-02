@@ -45,9 +45,15 @@ function HomePage() {
 
   return (
     <div className="page1 bg-[#1c1c1c]">
-      <div className="absolute bottom-20 right-10 w-80 z-99999999">
-        <div className="flex flex-col justify-start items-end">
-          <div className={isActive ? "visible" : "hidden"}>
+      <div>
+        <div className="flex  flex-col justify-start items-end">
+          <div
+            className={
+              isActive
+                ? "absolute bottom-50  right-5  z-99999999 visible"
+                : "hidden"
+            }
+          >
             <div>
               <motion.div
                 initial={{ scale: 0 }}
@@ -80,7 +86,6 @@ function HomePage() {
                   ))}
                 </div>
                 <div className="flex flex-col gap-1">
-                  {" "}
                   <div className="border-t bg-white flex p-2">
                     <input
                       type="text"
@@ -105,13 +110,17 @@ function HomePage() {
               </motion.div>
             </div>
           </div>
-          <img
-            src={images.logo}
-            onClick={toggleClass}
-            className={isActive ? "w-1/4 animate-none" : "w-1/4 animate-pulse"}
-            alt=""
-          />
         </div>
+        <img
+          src={images.logo}
+          onClick={toggleClass}
+          className={
+            isActive
+              ? "w-1/4  animate-none absolute bottom-20 right-5 z-99999999"
+              : "w-1/4 animate-pulse  absolute bottom-20  right-5   z-99999999"
+          }
+          alt=""
+        />
       </div>
 
       <motion.img
