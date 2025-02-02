@@ -116,8 +116,8 @@ function HomePage() {
           onClick={toggleClass}
           className={
             isActive
-              ? "w-[100px] animate-none absolute bottom-20 right-5 z-99999999"
-              : "w-[100px] animate-pulse  absolute bottom-20  right-5   z-99999999"
+              ? "md:w-[100px] w-[80px] animate-none absolute bottom-20 right-5 z-99999999"
+              : "md:w-[100px] bg-[#7d39ff] p-1 rounded-full w-[80px] animate-pulse  bottom-20  right-5   z-99999999 fixed"
           }
           alt=""
         />
